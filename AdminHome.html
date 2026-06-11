@@ -1,0 +1,338 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Face Banking</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="static/assets/img/logo/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="static/assets/css/animate.css">
+    <link rel="stylesheet" href="static/assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="static/assets/css/slick.css">
+    <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="static/assets/css/spacing.css">
+    <link rel="stylesheet" href="static/assets/css/main.css">
+</head>
+
+<body>
+<style>
+/* Header styles */
+.tp-header-area-3 {
+  background:#004D6E;
+  padding: 50px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 999;
+}
+
+.site-logo h1 {
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+    font-size: 50px;
+
+}
+
+.site-logo h1 span {
+  color: #4fc3f7;
+}
+
+.tp-main-menu-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tp-main-menu-content ul li {
+  margin: 0 15px;
+}
+
+.tp-main-menu-content ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.tp-main-menu-content ul li a:hover {
+  background-color: #4fc3f7;
+  color: #000000;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  font-size: 50px;
+  background: none;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #2a2a3b;
+  padding: 15px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 50px;
+  display: block;
+}
+
+.mobile-menu ul li a:hover {
+  color: #4fc3f7;
+}
+</style>
+
+
+
+ <!-- Header Area Start -->
+<header class="tp-header-area-3 p-relative">
+  <div class="tp-header-box-6">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-between">
+        <!-- Logo Section -->
+        <div class="col-auto">
+          <a href="#" class="site-logo">
+            <h1>Face <span>Banking</span></h1>
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="col d-none d-xl-block">
+          <nav class="tp-main-menu-content">
+            <ul class="tp-onepage-menu d-flex justify-content-center">
+              {% include 'menu/AdminMenu.html' %}
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="col-auto d-xl-none">
+          <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+
+</header>
+<!-- Header Area End -->
+
+
+
+
+    <main>
+		<style>
+			.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  background-color: #4fc3f7;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.styled-table tbody tr {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #eeeeff;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #d6ccff;
+}
+
+.action-link {
+  color: #fff;
+  background-color: #28a745;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.action-link:hover {
+  background-color: #4fc3f7;
+}
+
+		</style>
+
+		<!-- User Information Section -->
+        <br>
+        <br>
+
+<h3 class="title-w3 text-bl text-center font-weight-bold mb-4">User Information</h3>
+<div class="table-responsive">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Bank Name</th>
+                <th>Account No</th>
+                <th>User Name</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+                <td>{{item[5]}}</td>
+                <td>{{item[12]}}</td>
+                <td>{{item[6]}}</td>
+                <td>{{item[7]}}</td>
+                <td>{{item[10]}}</td>
+                <td><a class="action-link" href="Approved?lid={{item[0]}}">Approved</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Active User Section -->
+<h3 class="title-w3 text-bl text-center font-weight-bold my-5">Active User Information</h3>
+<div class="table-responsive">
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Bank Name</th>
+                <th>Account No</th>
+                <th>User Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item1 in data1 %}
+            <tr>
+                <td>{{item1[1]}}</td>
+                <td>{{item1[2]}}</td>
+                <td>{{item1[3]}}</td>
+                <td>{{item1[4]}}</td>
+                <td>{{item1[5]}}</td>
+                <td>{{item1[12]}}</td>
+                <td>{{item1[6]}}</td>
+                <td>{{item1[7]}}</td>
+                <td style="color:green;">{{item1[10]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+    </main>
+
+<br>
+<br>
+<br><br>
+<br>
+<br>
+    <!-- footer area start -->
+    <footer data-bg-color="#004D6E">
+
+
+
+        <div class="tp-footer-copyright-area p-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 ">
+                        <div class="tp-footer-copyright-inner" align="center">
+                            <p>© Face Banking 2025 | All Rights Reserved</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+    <!-- JS here -->
+    <script src="static/assets/js/vendor/jquery.js"></script>
+    <script src="static/assets/js/vendor/waypoints.js"></script>
+    <script src="static/assets/js/bootstrap-bundle.js"></script>
+    <script src="static/assets/js/meanmenu.js"></script>
+    <script src="static/assets/js/swiper-bundle.js"></script>
+    <script src="static/assets/js/slick.js"></script>
+    <script src="static/assets/js//jquery-appear.js"></script>
+    <script src="static/assets/js/jquery-knob.js"></script>
+    <script src="static/assets/js/magnific-popup.js"></script>
+    <script src="static/assets/js/nice-select.js"></script>
+    <script src="static/assets/js/purecounter.js"></script>
+    <script src="static/assets/js/countdown.js"></script>
+    <script src="static/assets/js/wow.js"></script>
+    <script src="static/assets/js/isotope-pkgd.js"></script>
+    <script src="static/assets/js/imagesloaded-pkgd.js"></script>
+    <script src="static/assets/js/ajax-form.js"></script>
+    <script src="static/assets/js/main.js"></script>
+	{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+  {% endif %}
+{% endwith %}
+</body>
+
+</html>

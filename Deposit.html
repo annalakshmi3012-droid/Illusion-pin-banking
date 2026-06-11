@@ -1,0 +1,264 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Face Banking</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="static/assets/img/logo/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="static/assets/css/animate.css">
+    <link rel="stylesheet" href="static/assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="static/assets/css/slick.css">
+    <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="static/assets/css/spacing.css">
+    <link rel="stylesheet" href="static/assets/css/main.css">
+</head>
+
+<body>
+<style>
+/* Header styles */
+.tp-header-area-3 {
+  background:#004D6E;
+  padding: 50px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 999;
+}
+
+.site-logo h1 {
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+    font-size: 50px;
+
+}
+
+.site-logo h1 span {
+  color: #4fc3f7;
+}
+
+.tp-main-menu-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tp-main-menu-content ul li {
+  margin: 0 15px;
+}
+
+.tp-main-menu-content ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.tp-main-menu-content ul li a:hover {
+  background-color: #4fc3f7;
+  color: #000000;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  font-size: 50px;
+  background: none;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #2a2a3b;
+  padding: 15px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 50px;
+  display: block;
+}
+
+.mobile-menu ul li a:hover {
+  color: #4fc3f7;
+}
+</style>
+
+
+
+ <!-- Header Area Start -->
+<header class="tp-header-area-3 p-relative">
+  <div class="tp-header-box-6">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-between">
+        <!-- Logo Section -->
+        <div class="col-auto">
+          <a href="#" class="site-logo">
+            <h1>Face <span>Banking</span></h1>
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="col d-none d-xl-block">
+          <nav class="tp-main-menu-content">
+            <ul class="tp-onepage-menu d-flex justify-content-center">
+              {% include 'menu/UserMenu.html' %}
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="col-auto d-xl-none">
+          <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+
+</header>
+<!-- Header Area End -->
+
+
+
+
+    <main>
+
+
+
+
+
+        <section id="contact" class="tp-contact-area-2 tp-contact-bg-2 p-relative pt-90 pb-120">
+            <div class="container">
+                <div class="tp-contact-box-2">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="tp-contact-thumb wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+                                <img src="static/assets/img/contact/home-3/img-2.jpg" alt="" style="height:695px; width:498px;" >
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="tp-contact-wrapper-2">
+                                         <br>
+                                  <br>
+                                  <br>
+                                       <br>
+								 <br>
+                                       <br>
+
+
+                                <span class="tp-section-title-pre" style="margin-left:20%;  font-size: 30px;">Amount Deposit</span>
+                                <br>
+                                  <br>
+                                  <br>
+
+
+                                <form method="POST" id="contactForm" class="tp-contact-form-2" name="contactForm" novalidate="novalidate" action="/deposit"  >
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-input">
+                                                <input type="number" name="amt" class="form-control" placeholder="Enter Amount" required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-input">
+                                                <button type="submit" class="tp-btn">Submit</button>
+                                            </div>
+                                            <br>
+                                               <div class="form-input">
+                                                <button type="reset" class="tp-btn">Reset</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+    <!-- footer area start -->
+    <footer data-bg-color="#004D6E">
+
+
+
+        <div class="tp-footer-copyright-area p-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 ">
+                        <div class="tp-footer-copyright-inner" align="center">
+                            <p>© Face Banking 2025 | All Rights Reserved</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+
+
+    <!-- JS here -->
+    <script src="static/assets/js/vendor/jquery.js"></script>
+    <script src="static/assets/js/vendor/waypoints.js"></script>
+    <script src="static/assets/js/bootstrap-bundle.js"></script>
+    <script src="static/assets/js/meanmenu.js"></script>
+    <script src="static/assets/js/swiper-bundle.js"></script>
+    <script src="static/assets/js/slick.js"></script>
+    <script src="static/assets/js//jquery-appear.js"></script>
+    <script src="static/assets/js/jquery-knob.js"></script>
+    <script src="static/assets/js/magnific-popup.js"></script>
+    <script src="static/assets/js/nice-select.js"></script>
+    <script src="static/assets/js/purecounter.js"></script>
+    <script src="static/assets/js/countdown.js"></script>
+    <script src="static/assets/js/wow.js"></script>
+    <script src="static/assets/js/isotope-pkgd.js"></script>
+    <script src="static/assets/js/imagesloaded-pkgd.js"></script>
+    <script src="static/assets/js/ajax-form.js"></script>
+    <script src="static/assets/js/main.js"></script>
+	{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+  {% endif %}
+{% endwith %}
+</body>
+
+</html>
